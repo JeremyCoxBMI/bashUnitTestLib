@@ -5,7 +5,7 @@ The purpose of this testing framework is to run inside bash, at the expense of f
 
 Another advantage is simplicity, ease of use, and speed.  It is not a foreign concept to a bash developer to write everything in a linear manner; so we don't necessarily need high powered syntax for unit tests, which requires an independent interpretter.
 
-You can do most of the things frameworks like bats (https://github.com/ztombol/bats-docs) and bash_unit (https://github.com/pgrange/bash_unit) provide.
+You can do most of the things frameworks like bats (https://github.com/ztombol/bats-docs), bash_unit (https://github.com/pgrange/bash_unit), and shunit2 https://alexharv074.github.io/2017/07/07/unit-testing-a-bash-script-with-shunit2.html) provide.
 
 * Execute tests in their **own environment**: use a script called to process tests independently
 * **Setup** and **teardown** : you simply call the functions as appropriate before and after in the script.
