@@ -2,16 +2,16 @@ TURNS OUT bats is written in bash!
 So this really serves no purpose to continue.  We can just set up bats to run within the repository.
 
 # bashUnitTestLib
-A lite unit test framework for bash using a bash script, not an exectuable
+A lite unit test framework for bash using a bash script.  It is eminently portable; just copy the script into your repo where you are tesitng.
 
-The purpose of this testing framework is to run inside bash, at the expense of fancy features.  Instead, you can write bash test cases **without** the need for **installing an executable**. This has the distinct advantage of running unit tests where they are deployed **without requiring** a software bash unit tester installed.  In my experience, that's pretty much everywhere you want to run unit tests when delivering code to new machines.
+This has the distinct advantage of running unit tests where they are deployed **without requiring** a software bash unit tester installed.  In my experience, that's pretty much everywhere you want to run unit tests when delivering code to new machines.
 
-Another advantage is simplicity, ease of use, and speed.  It is not a foreign concept to a bash developer to write everything in a linear manner; so we don't necessarily need high powered syntax for unit tests, which requires an independent interpretter.
+Another advantage is simplicity, ease of use, and speed.  It is not a foreign concept to a bash developer to write everything in a linear manner; so we don't necessarily need high powered syntax for unit tests, which requires an independent interpretter.  In fact, this can be a burden as it is harder to pass data into individual unit tests using a system that isolates each test.
 
 You can do most of the things frameworks like bats (https://github.com/ztombol/bats-docs), bash_unit (https://github.com/pgrange/bash_unit), and shunit2 https://alexharv074.github.io/2017/07/07/unit-testing-a-bash-script-with-shunit2.html) provide.
 
-* Execute tests in their **own environment**: use a script called to process tests independently
-* **Setup** and **teardown** : you simply call the functions as appropriate before and after in the script.
+* Execute tests in their **own environment**: use a script called to process tests independently (or subshell)
+* **setup** and **teardown** : you simply write code as appropriate before and after in the script.
 * **assertions** : you can use the provided functions or write your own following the template
 * control the **level of verbosity**: report only errors, only final tally, etc.
 * you can do "tests within tests": multiple assertions per test that count as 1 success or failure
