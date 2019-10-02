@@ -1,4 +1,5 @@
 TURNS OUT bats is written in bash!
+So this really serves no purpose to continue.  We can just set up bats to run within the repository.
 
 # bashUnitTestLib
 A lite unit test framework for bash using a bash script, not an exectuable
